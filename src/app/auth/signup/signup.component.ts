@@ -3,7 +3,7 @@ import {FormControl, FormGroup, Validators} from '@angular/forms'
 import { Router } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
 import { SignupRequestPayload } from 'src/model/singup-request-payload';
-import { AuthService } from '../auth/shared/auth.service';
+import { AuthService } from '../shared/auth.service';
 
 
 
