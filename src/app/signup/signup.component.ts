@@ -9,11 +9,11 @@ import { AuthService } from '../auth/shared/auth.service';
 
 
 @Component({
-  selector: 'app-header',
-  templateUrl: './header.component.html',
-  styleUrls: ['./header.component.css']
+  selector: 'app-signup',
+  templateUrl: './signup.component.html',
+  styleUrls: ['./signup.component.css']
 })
-export class HeaderComponent  implements OnInit  {
+export class SignupComponent  implements OnInit  {
   siginupRequestPayload:SignupRequestPayload ;
   signupForm! : FormGroup;
   
