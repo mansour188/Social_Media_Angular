@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+  
+        <div class="login">
+            <div class="heading">
+              <h2>Sign in</h2>
+              <form action="#" class="form"  [formGroup]="loginForm" (ngSubmit)="login()">
+          
+                <div class="input-group input-group-lg">
+                  <span class="input-group-addon"><i class="fa fa-user"></i></span>
+                  <input type="text" class="form-control" placeholder="Username or email" [formControlName]="'email'"  required
+                  autofocus>
+                  <span *ngIf="!loginForm.get('email')?.valid && loginForm.get('email')?.touched"></span>
+                    </div>
+          
+                  <div class="input-group input-group-lg">
+                    <span class="input-group-addon"><i class="fa fa-lock"></i></span>
+                    <input type="password" class="form-control" placeholder="Password" [formControlName]="'password'"  required>
+                    <span *ngIf="!loginForm.get('password')?.valid && loginForm.get('password')?.touched">
+                        Password cannot be empty
+                      </span> 
+          
+                  <button type="submit" class="float">Login</button>
+                  <span style="padding-left: 15px">New User? <a routerLink="/signup">SIGN UP</a></span>
+                </div>
+                <div class="login-failed" [ngStyle]="{'background-color': 'green'}" *ngIf="this.registerSuccessMessage.length > 0">
+                    <p class="register-success-text">{{registerSuccessMessage}}</p>   
+               </div> 
+                 </form>
+            </div>
+        </div>
+    
+    
+</body>
+</html>
